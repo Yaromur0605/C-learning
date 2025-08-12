@@ -7,31 +7,23 @@ namespace learning
     {
         static void Main()
         {
+            Console.Write("Веди цифру: ");
+            Double number = Convert.ToDouble(Console.ReadLine());
+            Double a = Math.Pow(number, 2);
+            
 
-
-            Console.Write("Enter name: ");
-            string role = Console.ReadLine();
-
-            if (role == "admin")
+            if (a < 10)
             {
-                Console.Write("Enter user name: ");
-                string User = Console.ReadLine();
-                Console.Write("Enter {0}'s age: ", User);
-                short age = Convert.ToInt16(Console.ReadLine());
-                if (age <= 0 || age > 99) {
-                    Console.Write("Enter {0} age: ", User);
-                    age = Convert.ToInt16(Console.ReadLine());
-                }
-                if(age <= 0 || age > 99)
-                {
-                    Console.WriteLine("Error");
-                }else
-                    Console.WriteLine("User's age is " + age);
-
-        
-                }
+                Console.WriteLine("{0} small square", a);
+            }
+            else if (a >= 10 && a <= 100)
+            {
+                Console.WriteLine("{0} square is medium", a);
+            }
             else
-                Console.WriteLine("you are not admin");
+            {
+                Console.WriteLine("{0} square is big", a);
+            }
         }
     }
 }
