@@ -1,4 +1,6 @@
 ﻿
+using System.Transactions;
+
 namespace learning
 {
     class Program
@@ -6,30 +8,30 @@ namespace learning
         static void Main()
         {
 
-            int a = 5;
-            bool isHasCar = false;
 
-            if (a > 7)
-            {
-                Console.WriteLine("a > 7");
-            }
-            else if (a < 5)
-            {
-                Console.WriteLine("a<5");
+            Console.Write("Enter name: ");
+            string role = Console.ReadLine();
 
-            }
-            else if ((a == 5 || isHasCar) && a > 2)
-            {                                                       /* || Значить та. Скажемо якщо а = 5 ,але IsHasCar буде true 
-                                                                    код виконаєтья ,бо одна з умов виконана, але && значить що 2 умови мають  бути виконані */
-                                            
-                Console.WriteLine("a = 5");
-                Console.WriteLine("User has not car!");
-            }
+            if (role == "admin")
+            {
+                Console.Write("Enter user name: ");
+                string User = Console.ReadLine();
+                Console.Write("Enter {0}'s age: ", User);
+                short age = Convert.ToInt16(Console.ReadLine());
+                if (age <= 0 || age > 99) {
+                    Console.Write("Enter {0} age: ", User);
+                    age = Convert.ToInt16(Console.ReadLine());
+                }
+                if(age <= 0 || age > 99)
+                {
+                    Console.WriteLine("Error");
+                }else
+                    Console.WriteLine("User's age is " + age);
+
+        
+                }
             else
-            {
-                Console.WriteLine("a != 5");
-            }
-
+                Console.WriteLine("you are not admin");
         }
     }
 }
