@@ -7,22 +7,29 @@ namespace learning
     {
         static void Main()
         {
-            Console.Write("Веди цифру: ");
-            Double number = Convert.ToDouble(Console.ReadLine());
-            Double a = Math.Pow(number, 2);
-            
 
-            if (a < 10)
+
+            short user_input = Convert.ToInt16(Console.ReadLine());
+
+            switch (user_input)
             {
-                Console.WriteLine("{0} small square", a);
-            }
-            else if (a >= 10 && a <= 100)
-            {
-                Console.WriteLine("{0} square is medium", a);
-            }
-            else
-            {
-                Console.WriteLine("{0} square is big", a);
+                case 5:
+                    Console.WriteLine("num is 5");
+                    break;
+                case 15:
+                    Console.WriteLine("num is 15");
+                    break;
+                case 20:
+                    Console.WriteLine("num is 20");
+                    break;
+                case 250:
+                    Console.WriteLine("number is 250");
+                    break;
+                default:                              //Default можна сказати аналог else
+                    Console.WriteLine("number is unrecognized");
+                    break;
+                    
+
             }
         }
     }
