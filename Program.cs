@@ -7,43 +7,96 @@ namespace learning
     {
         static void Main()
         {
+            Console.Clear();
+            Console.WriteLine("How can i call you");
+            Thread.Sleep(200);
+            Console.Write("Name: ");
+            string a = (Console.ReadLine().ToLower());
+            string[] spt = ["gay", "fuck", "bitch","asshole","idiot",",dumb"];
 
-            //for (float i = 200; i >10; i -= 2)
-            //    Console.WriteLine("element {0}", i);
+            if (spt.Any(swearing => a.Contains(swearing)))
+            {
+                Console.Clear();
+                Thread.Sleep(1000);
+                Console.WriteLine("Ban word has been found");
+                Thread.Sleep(2000);
+                Console.Clear();
+                Main();
+            }
+             else if (string.IsNullOrWhiteSpace(a)) {
+                Console.Clear();
 
-            //byte i = 0;
-            //while (i < 10)
-            //{
-            //    Console.WriteLine(i);
-            //    i++;
-            //}
+                for (int i = 0; i <3; i++)
+                {
+                    Thread.Sleep(1000);
+                    Console.Write(".");
+                    
+                }
+                Console.Clear() ;
+                Main();
 
-            //bool isHasCar = true;
-            //while (isHasCar)
-            //{
-            //    string end = Console.ReadLine().ToLower();
-            //    if (end == "end")
-            //    {
-            //        isHasCar = false;
-            //    }
+            }
+
+            else if (a == "admin")
+            {
+                Console.Clear();
+                Thread.Sleep(300);
+                Console.WriteLine("hello boss :)");
+                Thread.Sleep(1000);
+                
+                UI();
+            }
+            else
+            {
+                Console.WriteLine("{0}, hello", a);
+                UI();
 
 
-            //}
+            }
+            static void UI()
+            {
+                Console.Clear();
+                bool IsUserLoggedOut = false;
+                Console.WriteLine("What do you wanna do?");
+                Thread.Sleep(1000);
+                Console.Clear();
+                Console.WriteLine("log out, (we don't have anything else log out :D )");
 
-            //byte i = 100;
 
-            //do
-            //{
-            //    Console.WriteLine(i);
-            //} while (i < 10);
+                while (!IsUserLoggedOut)
+                {
+                   
+                   Console.Write("User: ");
+                   string b = Console.ReadLine().ToLower();
+                    if (b == "log out")
+                    {
+                        Console.Clear();
+                        for (int i = 0; i < 3; i++)
+                        {
+                            Thread.Sleep(1000);
+                            Console.Write(".");
 
-            //for (int i = 0; i < 100000; i++)
-            //{
-            //    //if (i > 5) ;
-            //    //break;
-            //    Console.WriteLine("El" + i);
-            //}
-        }            
-        
+                        }
+                        Thread.Sleep(400);
+                        Console.WriteLine();
+                        Console.WriteLine("Bye see you next time :)");
+                        Thread.Sleep(1000);
+                        Console.Clear();
+
+                        IsUserLoggedOut=true;
+                        Console.Clear();
+
+                    }
+                    else
+                    {
+                        IsUserLoggedOut = false;
+                        Console.Clear();
+                    }
+                    
+                }
+                   Main();
+            }
+            
+        }
     }
 }
