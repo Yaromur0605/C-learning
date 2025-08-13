@@ -5,30 +5,31 @@ namespace learning
 {
     class Program
     {
+        public static string user_input;
         static void Main()
         {
+            Console.WriteLine("Привіт, я твій помічник! Як тебе звати?");
+            user_input = Console.ReadLine().ToLower();
+            switch_function();
 
+        }
 
-            short user_input = Convert.ToInt16(Console.ReadLine());
-
+        static void switch_function()
+        {
             switch (user_input)
             {
-                case 5:
-                    Console.WriteLine("num is 5");
+                case "hello":
+                    Console.WriteLine("Ти 'hello?'");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    Main();
                     break;
-                case 15:
-                    Console.WriteLine("num is 15");
+                default:
+                    Console.WriteLine("{0} Привіт", user_input);
                     break;
-                case 20:
-                    Console.WriteLine("num is 20");
-                    break;
-                case 250:
-                    Console.WriteLine("number is 250");
-                    break;
-                default:                              //Default можна сказати аналог else
-                    Console.WriteLine("number is unrecognized");
-                    break;
-                    
+
+
+
 
             }
         }
