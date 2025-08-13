@@ -5,33 +5,45 @@ namespace learning
 {
     class Program
     {
-        public static string user_input;
         static void Main()
         {
-            Console.WriteLine("Привіт, я твій помічник! Як тебе звати?");
-            user_input = Console.ReadLine().ToLower();
-            switch_function();
 
-        }
+            //for (float i = 200; i >10; i -= 2)
+            //    Console.WriteLine("element {0}", i);
 
-        static void switch_function()
-        {
-            switch (user_input)
-            {
-                case "hello":
-                    Console.WriteLine("Ти 'hello?'");
-                    Thread.Sleep(2000);
-                    Console.Clear();
-                    Main();
-                    break;
-                default:
-                    Console.WriteLine("{0} Привіт", user_input);
-                    break;
+            //byte i = 0;
+            //while (i < 10)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
 
-
+            //bool isHasCar = true;
+            //while (isHasCar)
+            //{
+            //    string end = Console.ReadLine().ToLower();
+            //    if (end == "end")
+            //    {
+            //        isHasCar = false;
+            //    }
 
 
-            }
-        }
+            //}
+
+            //byte i = 100;
+
+            //do
+            //{
+            //    Console.WriteLine(i);
+            //} while (i < 10);
+
+            //for (int i = 0; i < 100000; i++)
+            //{
+            //    //if (i > 5) ;
+            //    //break;
+            //    Console.WriteLine("El" + i);
+            //}
+        }            
+        
     }
 }
