@@ -7,20 +7,18 @@ namespace learning
     {
         static void Main()
         {
-            char[,] symbols = new char[2, 3];
-            symbols[0, 0] = 'H';
-            Console.WriteLine(symbols[0, 0]);
+            short[,] nums = {
+                {3,4,2 },
+                {2,1,4 },
+                {5,9,6 },
 
-            int[,] nums = 
-            {
-                {4, 6 ,7},
-                {5, 7 ,3},
-                {3, 3, 2 }
-                
+
             };
 
-            nums[1, 2] = 56;
-
+            foreach (short el in nums)
+            {
+                Console.WriteLine("El:" + el );
+            }
         }
     }
 }
