@@ -7,18 +7,20 @@ namespace learning
     {
         static void Main()
         {
-            short[] numbers = new short[10];
-            short summa = 0;
+            char[,] symbols = new char[2, 3];
+            symbols[0, 0] = 'H';
+            Console.WriteLine(symbols[0, 0]);
 
-            Random random = new Random();
-            for (byte i = 0; i < numbers.Length; i++)
+            int[,] nums = 
             {
+                {4, 6 ,7},
+                {5, 7 ,3},
+                {3, 3, 2 }
                 
-                numbers[i] = Convert.ToInt16(random.Next(-15, 15));
-                Console.WriteLine("El: " + numbers[i]);
-                summa += numbers[i];
-            }
-            Console.WriteLine("Summa:" + summa);
+            };
+
+            nums[1, 2] = 56;
+
         }
     }
 }
