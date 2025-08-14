@@ -7,23 +7,18 @@ namespace learning
     {
         static void Main()
         {
-            byte[] nums = new byte[5];
-            nums[0] = 250;
-            nums[1] = 50;
-            nums[2] = 20;
-            nums[3] = 100;
-            nums[4] = 25;
+            short[] numbers = new short[10];
+            short summa = 0;
 
-            //Console.WriteLine("el:" + nums[1]);
-
-            string[] words = ["Bob" ,"John", "Alex"];
-
-            words[1] = "josh";
-            Console.WriteLine(words);
-
-            for (byte i = 0; i < words.Length; i++)
-                Console.WriteLine(words[i]);
+            Random random = new Random();
+            for (byte i = 0; i < numbers.Length; i++)
+            {
+                
+                numbers[i] = Convert.ToInt16(random.Next(-15, 15));
+                Console.WriteLine("El: " + numbers[i]);
+                summa += numbers[i];
+            }
+            Console.WriteLine("Summa:" + summa);
         }
- 
     }
 }
